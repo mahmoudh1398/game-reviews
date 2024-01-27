@@ -1,6 +1,6 @@
 {
   "name": "next-reviews",
-  "private": true,
+  "private": "false",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
