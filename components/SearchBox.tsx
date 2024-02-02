@@ -6,15 +6,11 @@ import { Combobox } from "@headlessui/react";
 import { useIsClient } from "@/lib/hooks";
 import { searchReviews, type SearchableReview } from "@/lib/reviews";
 
-// export interface SearchBoxProps {
-//   reviews: SearchableReview[];
-// }
-
 export default function SearchBox() {
   const router = useRouter();
   const isClient = useIsClient();
   const [query, setQuery] = useState("");
-  const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState<SearchableReview[]>([]);
 
   const handleChange = (review: SearchableReview) => {
     router.push(`/reviews/${review.slug}`);

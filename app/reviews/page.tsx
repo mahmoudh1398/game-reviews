@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Heading from "@/components/Heading";
 import PaginationBar from "@/components/PaginationBar";
-import { getReviews } from "@/lib/reviews";
 import SearchBox from "@/components/SearchBox";
+import { getReviews } from "@/lib/reviews";
 
 interface ReviewsPageProps {
   searchParams: { page?: string };
