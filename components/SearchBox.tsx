@@ -19,7 +19,10 @@ export default function SearchBox() {
   useEffect(() => {
     if (query.length > 1) {
       (async () => {
-        const reviews = await searchReviews(query);
+        const response = await fetch(
+          "/api/search?query=" + encodeURIComponent(query)
+        );
+        const reviews = await response.json();
         setReviews(reviews);
       })();
     } else {
